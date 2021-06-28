@@ -1,0 +1,768 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/BebasNeue-webfont.eot');
+    src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'plane_crashregular';
+    src: url('../fonts/plane_crash-webfont.eot');
+    src: url('../fonts/plane_crash-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/plane_crash-webfont.woff2') format('woff2'),
+         url('../fonts/plane_crash-webfont.woff') format('woff'),
+         url('../fonts/plane_crash-webfont.ttf') format('truetype'),
+         url('../fonts/plane_crash-webfont.svg#plane_crashregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body
+{
+	width:100%;
+	height:100vh;
+}
+main
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	overflow:hidden;
+	
+}
+main span , main a
+{
+	display:block;
+
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+	font-family: 'bebas_neueregular';
+}
+#typography
+{
+	width:200%;
+	height:200%;
+	position:absolute;
+	
+	
+}
+#scene1 , #scene2 , #scene3{
+width:50%;
+height:50%;
+transform-style: preserve-3d;
+-webkit-perspective:2000;
+-moz-perspective:2000;
+perspective:2000;
+}
+#scene1{
+	position:absolute;
+	top:0;
+	left:0;
+	background-image:url(../images/scene_1.png);
+	background-repeat:repeat;
+
+}
+#scene2{
+	position:absolute;
+	top:50%;
+	left:0;
+		background-image:url(../images/scene_2.png);
+	background-repeat:repeat;
+
+}
+#scene3{
+	position:absolute;
+	top:50%;
+	left:50%;
+		background-image:url(../images/scene_3.png);
+	background-repeat:repeat;
+
+}
+
+#ht
+{
+	
+font-size: 20vh;
+color: #929292;
+text-align: left;
+margin: 0 auto;
+position:absolute;
+top:5vh;
+width:95%;
+padding-left:5%;
+
+opacity:0;
+
+}
+.animationStart #ht
+{
+	-webkit-animation:forht 0.5s;
+	-moz-animation:forht 0.5s;
+	animation:forht 0.5s;
+}
+#ia
+{
+	width:95%;
+padding-right:5%;
+font-size: 20vh;
+color: #929292;
+text-align: right;
+margin: 0 auto;
+position:absolute;
+top:40vh;
+opacity:0;
+
+}
+ 
+.animationStart #ia
+{
+	-webkit-animation:forai 0.5s;
+	-moz-animation:forai 0.5s;
+	animation:forai 0.5s;
+-webkit-animation-delay:0.8s;
+-moz-animation-delay:0.8s;
+animation-delay:0.8s;
+}
+#w
+{
+	width: 100%;
+font-size: 20vw;
+
+text-align: left;
+margin: 0 auto;
+position:absolute;
+bottom:0vh;
+opacity:0;
+
+color:#1abc9c;
+text-shadow: 2px 2px 3px rgba(26,188,156,0.1);
+ font-family: 'plane_crashregular';
+}
+
+.animationStart #w
+{
+	-webkit-animation:forw 0.5s;
+	-moz-animation:forw 0.5s;
+	animation:forw 0.5s;
+-webkit-animation-delay:1.8s;
+-moz-animation-delay:1.8s;
+animation-delay:1.8s;
+}
+#scene2 span
+{
+	width: 100%;
+font-size: 14vh;
+color: #929292;
+text-align: center;
+margin: 0 auto;
+opacity:0;
+
+
+}
+#scene3 span
+{
+
+
+}	
+.animationStart #and{
+	-webkit-animation:rotatex 0.3s;
+	-moz-animation:rotatex 0.3s;
+	animation:rotatex 0.3s;
+	-webkit-animation-delay:3s;
+	-moz-animation-delay:3s;
+	animation-delay:3s;
+}
+.animationStart #it
+{
+	-webkit-animation:rotatex 0.3s;
+	-moz-animation:rotatex 0.3s;
+	animation:rotatex 0.3s;
+	-webkit-animation-delay:3.5s;
+	-moz-animation-delay:3.5s;
+	animation-delay:3.5s;
+}
+.animationStart #seems
+{
+	-webkit-animation:rotatex 0.3s;
+	-moz-animation:rotatex 0.3s;
+	animation:rotatex 0.3s;
+	-webkit-animation-delay:4s;
+	-moz-animation-delay:4s;
+	animation-delay:4s;
+}
+.animationStart #like
+{
+	-webkit-animation:rotatex 0.3s;
+	-moz-animation:rotatex 0.3s;
+	animation:rotatex 0.3s;
+	-webkit-animation-delay:4.5s;
+	-moz-animation-delay:4.5s;
+	animation-delay:4.5s;
+}
+.animationStart #you
+{
+	-webkit-animation:rotatex 0.3s;
+	-moz-animation:rotatex 0.3s;
+	animation:rotatex 0.3s;
+	-webkit-animation-delay:5s;
+	-moz-animation-delay:5s;
+	animation-delay:5s;
+}
+.animationStart #have
+{
+	-webkit-animation:rotatex 0.3s;
+	-moz-animation:rotatex 0.3s;
+	animation:rotatex 0.3s;
+	-webkit-animation-delay:5.5s;
+	-moz-animation-delay:5.5s;
+	animation-delay:5.5s;
+}
+.animationStart #been
+{
+	-webkit-animation:rotatex 0.3s;
+	-moz-animation:rotatex 0.3s;
+	animation:rotatex 0.3s;
+	-webkit-animation-delay:6s;
+	-moz-animation-delay:6s;
+	animation-delay:6s;
+}
+
+#four
+{
+	
+font-size: 28vw;
+color: #840305;
+text-align: center;
+margin: 0 auto;
+
+
+opacity:0;
+ font-family: 'plane_crashregular';
+margin-top: 50px;
+
+
+		
+}
+.animationStart #four
+{
+	 -webkit-animation-name: forfour,blink;
+    -Webkit-animation-duration: 0.3s,0.5s;
+	-webkit-animation-timing-function:cubic-bezier(1.000, -0.530, 0.405, 1.425), ease;
+		-webkit-animation-delay:7.5s, 0;
+		-webkit-animation-iteration-count:1, infinite;
+		
+		 -moz-animation-name: forfour, blink;
+    -moz-animation-duration: 0.3s,0.5s;
+	-moz-animation-timing-function:cubic-bezier(1.000, -0.530, 0.405, 1.425), ease;
+		-moz-animation-delay:7.5s, 0;
+		-moz-animation-iteration-count:1, infinite;
+		
+		animation-name: forfour, blink;
+   animation-delay:7.5s , 0.5s;
+   animation-timing-function:cubic-bezier(1.000, -0.530, 0.405, 1.425) , ease;
+   animation-iteration-count:1, infinite;
+    animation-duration: 0.3s , 0.5s;
+		
+}
+#dwi
+{
+		width: 100%;
+font-size: 6vh;
+color: #262626;
+text-align: center;
+margin: 0 auto;
+position:absolute;
+top:40vh;
+ font-family: 'plane_crashregular';
+ opacity:0;
+
+}
+.animationStart #dwi
+{
+		-webkit-animation:fordwi 0.3s;
+		-moz-animation:fordwi 0.3s;
+		animation:fordwi 0.3s;
+	-webkit-animation-delay:8s;
+	-moz-animation-delay:8s;
+	animation-delay:8s;
+}
+#or
+{
+		width: 100%;
+font-size: 12vh;
+color: #929292;
+text-align: center;
+margin: 0 auto;
+position:absolute;
+bottom:26vh;
+opacity:0;
+
+
+}
+.animationStart #or
+{
+		-webkit-animation:rotatex 0.3s;
+		-moz-animation:rotatex 0.3s;
+		animation:rotatex 0.3s;
+	-webkit-animation-delay:8.5s;
+	-moz-animation-delay:8.5s;
+	animation-delay:8.5s;
+}
+#visit
+{
+
+}
+span#checkOut
+{
+		
+font-size: 6vh;
+color: #929292;
+text-align: right;
+margin: 0 auto;
+left:0;
+bottom:20vh;
+position:absolute;
+width:90%;
+padding-right:10%;
+opacity:0;
+}
+.animationStart span#checkOut
+{
+		-webkit-animation:rightIn 0.3s;
+		-moz-animation:rightIn 0.3s;
+		animation:rightIn 0.3s;
+	-webkit-animation-delay:8.9s;
+	-moz-animation-delay:8.9s;
+	animation-delay:8.9s;
+}
+a#musique
+{
+		
+font-size: 14vh;
+color: #929292;
+text-align: right;
+margin: 0 auto;
+position:absolute;
+bottom:5vh;
+display:block;
+right:10%;
+text-decoration:none;
+opacity:0;
+}
+.animationStart a#musique
+{
+		-webkit-animation:rightIn 0.3s;
+		-moz-animation:rightIn 0.3s;
+		animation:rightIn 0.3s;
+	-webkit-animation-delay:9.2s;
+	-moz-animation-delay:9.2s;
+	animation-delay:9.2s;
+}
+a#musique:hover
+{
+	color:#1abc9c;
+text-shadow: 0px 0px 5px rgba(26,188,156,0.9);
+
+}
+#link{
+width:100%;
+margin:0 auto;
+text-align:center;
+font-size:48px;
+opacity:0;
+position:absolute;
+color: #840305;
+}
+
+.animationStart #link
+{
+		-webkit-animation:fordwi 0.3s;
+		-moz-animation:fordwi 0.3s;
+		animation:fordwi 0.3s;
+	-webkit-animation-delay:8s;
+	-moz-animation-delay:8s;
+	animation-delay:8s;
+}
+@-webkit-keyframes forht {
+  0%   {
+  		-webkit-transform: translateZ(0) scale(1.0, 1.0) rotateX(-90deg);
+		
+	  }
+	
+  100% { 
+ -webkit-transform: translateZ(0) scale(1.0, 1.0) rotateX(00deg);
+  		
+   }
+}
+@-moz-keyframes forht {
+  0%   {
+  		-moz-transform: translateZ(0) scale(1.0, 1.0) rotateX(-90deg);
+		
+	  }
+	
+  100% { 
+ -moz-transform: translateZ(0) scale(1.0, 1.0) rotateX(00deg);
+  		
+   }
+}
+@keyframes forht {
+  0%   {
+  		transform: translateZ(0) scale(1.0, 1.0) rotateX(-90deg);
+		
+	  }
+	
+  100% { 
+transform: translateZ(0) scale(1.0, 1.0) rotateX(00deg);
+  		
+   }
+}
+
+@-moz-keyframes forai {
+  0%   { opacity: 0; 
+  		
+		left:-80%;
+	  }
+	   80% {
+  
+  left:0;
+  		
+   }
+  100% { opacity: 1;
+ 
+  		left:0;
+   }
+}
+@-webkit-keyframes forai {
+  0%   { opacity: 0; 
+  		
+		left:-80%;
+	  }
+	   80% {
+  
+  left:0;
+  		
+   }
+  100% { opacity: 1;
+ 
+  	left:0;	
+   }
+}
+
+@keyframes forai {
+  0%   { opacity: 0; 
+  		
+		left:-80%;
+	  }
+	   80% {
+  
+  left:0;
+  		
+   }
+  100% { opacity: 1;
+ 
+  	left:0;	
+   }
+}
+@-webkit-keyframes forw {
+  0%   { opacity: 0; 
+  		
+		color: rgba(0,0,0,0.6);
+		text-shadow: 0px 0px 20px rgba(26,188,156,0.9);
+	  }
+	   80% { opacity: 1;
+  color:#1abc9c;
+text-shadow: 0px 0px 20px rgba(26,188,156,0.9);
+  		
+   }
+  100% { opacity: 1;
+ color:#1abc9c;
+text-shadow: 0px 0px 3px rgba(26,188,156,0.1);
+  		
+   }
+}
+@-moz-keyframes forw {
+  0%   { opacity: 0; 
+  		
+		color: rgba(0,0,0,0.6);
+		text-shadow: 0px 0px 20px rgba(26,188,156,0.9);
+	  }
+	   80% { opacity: 1;
+  color:#1abc9c;
+text-shadow: 0px 0px 20px rgba(26,188,156,0.9);
+  		
+   }
+  100% { opacity: 1;
+ color:#1abc9c;
+text-shadow: 0px 0px 3px rgba(26,188,156,0.1);
+  		
+   }
+}
+@keyframes forw {
+  0%   { opacity: 0; 
+  		
+		color: rgba(0,0,0,0.6);
+		text-shadow: 0px 0px 20px rgba(26,188,156,0.9);
+	  }
+	   80% { opacity: 1;
+  color:#1abc9c;
+text-shadow: 0px 0px 20px rgba(26,188,156,0.9);
+  		
+   }
+  100% { opacity: 1;
+ color:#1abc9c;
+text-shadow: 0px 0px 3px rgba(26,188,156,0.1);
+  		
+   }
+}
+@-webkit-keyframes rotatex {
+  0%   { 
+  		-webkit-transform: translateZ(0) scale(1.0, 1.0) rotateX(-90deg);
+		
+	  }
+	   80% { 
+ -webkit-transform: translateZ(0) scale(1.0, 1.0) rotateX(0deg);
+  
+  		
+   }
+  100% { 
+  -webkit-transform: translateZ(0) scale(1.0, 1.0) rotateX(0deg);
+  		
+   }
+}
+@-moz-keyframes rotatex {
+  0%   { 
+  		-moz-transform: translateZ(0) scale(1.0, 1.0) rotateX(-90deg);
+		
+	  }
+	   80% { 
+ -moz-transform: translateZ(0) scale(1.0, 1.0) rotateX(0deg);
+  
+  		
+   }
+  100% { 
+  -moz-transform: translateZ(0) scale(1.0, 1.0) rotateX(0deg);
+  		
+   }
+}
+@keyframes rotatex {
+  0%   { 
+  		transform: translateZ(0) scale(1.0, 1.0) rotateX(-90deg);
+		
+	  }
+	   80% { 
+transform: translateZ(0) scale(1.0, 1.0) rotateX(0deg);
+  
+  		
+   }
+  100% { 
+  transform: translateZ(0) scale(1.0, 1.0) rotateX(0deg);
+  		
+   }
+}
+
+@-webkit-keyframes forfour {
+  0%   { 
+  		
+		font-size:100vh;
+	  }
+	   60% { 
+font-size:30vw;
+  		
+   }
+  100% { 
+font-size:30vw;
+  		
+   }
+}
+@-moz-keyframes forfour {
+  0%   { 
+  		
+		font-size:100vh;
+	  }
+	   60% { 
+font-size:30vw;
+  		
+   }
+  100% { 
+font-size:30vw;
+  		
+   }
+}
+@keyframes forfour {
+  0%   { 
+  		
+		font-size:100vh;
+	  }
+	   60% { 
+font-size:30vw;
+  		
+   }
+  100% { 
+font-size:30vw;
+  		
+   }
+}
+@-webkit-keyframes blink {
+  0%   { 
+  		text-shadow: 2px 2px 50px rgba(255,19,19,0.6);
+	  }
+	   50% { 
+text-shadow: 2px 2px 5px rgba(255,19,19,0.1);
+  		
+   }
+  100% { 
+text-shadow: 2px 2px 50px rgba(255,19,19,0.6);
+  		
+   }
+}
+@-moz-keyframes blink {
+  0%   { 
+  		text-shadow: 2px 2px 50px rgba(255,19,19,0.6);
+	  }
+	   50% { 
+text-shadow: 2px 2px 5px rgba(255,19,19,0.1);
+  		
+   }
+  100% { 
+text-shadow: 2px 2px 50px rgba(255,19,19,0.6);
+  		
+   }
+}
+@keyframes blink {
+  0%   { 
+  		text-shadow: 2px 2px 50px rgba(255,19,19,0.6);
+	  }
+	   50% { 
+text-shadow: 2px 2px 5px rgba(255,19,19,0.1);
+  		
+   }
+  100% { 
+text-shadow: 2px 2px 50px rgba(255,19,19,0.6);
+  		
+   }
+}
+@-webkit-keyframes fordwi {
+  0%   {
+  		-webkit-transform: translateZ(0) scale(1.0, 1.0) rotateZ(-90deg);
+		
+	  }
+	
+  100% { 
+ -webkit-transform: translateZ(0) scale(1.0, 1.0) rotateZ(0deg);
+  		
+   }
+}
+@-moz-keyframes fordwi {
+  0%   {
+  		-moz-transform: translateZ(0) scale(1.0, 1.0) rotateZ(-90deg);
+		
+	  }
+	
+  100% { 
+ -moz-transform: translateZ(0) scale(1.0, 1.0) rotateZ(0deg);
+  		
+   }
+}
+@keyframes fordwi {
+  0%   {
+  		transform: translateZ(0) scale(1.0, 1.0) rotateZ(-90deg);
+		
+	  }
+	
+  100% { 
+transform: translateZ(0) scale(1.0, 1.0) rotateZ(0deg);
+  		
+   }
+}
+@-webkit-keyframes rightIn {
+  0%   {
+  		-webkit-transform: translateZ(0) scale(1.0, 1.0) translateX(20%);
+		
+	  }
+	
+  100% { 
+ 	-webkit-transform: translateZ(0) scale(1.0, 1.0) translateX(0%);
+  		
+   }
+}
+@-moz-keyframes rightIn {
+  0%   {
+  		-moz-transform: translateZ(0) scale(1.0, 1.0) translateX(20%);
+		
+	  }
+	
+  100% { 
+ 	-moz-transform: translateZ(0) scale(1.0, 1.0) translateX(0%);
+  		
+   }
+}
+@keyframes rightIn {
+  0%   {
+  		transform: translateZ(0) scale(1.0, 1.0) translateX(20%);
+		
+	  }
+	
+  100% { 
+ 	transform: translateZ(0) scale(1.0, 1.0) translateX(0%);
+  		
+   }
+}
