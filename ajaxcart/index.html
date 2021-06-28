@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MUSIQUE</title>
+<script src="js/jquery-1.11.1.min.js"></script>
+<link href="css/styles.css" type="text/css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+</head>
+
+<body>
+<div id="loader">
+    <div id="bar1"></div>
+    <div id="bar2"></div>
+    <div id="bar3"></div>
+    <div id="bar4"></div>
+    <div id="bar5"></div>
+    <div id="bar6"></div>
+    <div id="bar7"></div>
+    <div id="bar8"></div>
+    <div id="bar9"></div>
+    <div id="bar10"></div>
+  </div>
+<div id="lightBoxContainer">
+  <div id="lightbox">
+    <img alt="close" id="closeLightBox" src="images/plus.png">
+    <div id="selProductImg"></div>
+    <div id="selInfo">
+    <div id="selProductName"></div>
+    <h3 id="pricelabel">Price</h3>
+    <div id="selProductPrice"></div>
+    <h3 id="model">Select Model</h3>
+    <div id="selModel"></div>
+    <h3 id="howmany">How many would you like?</h3>
+    <div id="selNumber"><div class="plus">+</div><div  class="count">1</div><div class="minus">-</div></div>
+    <div id="AddtoCart">
+    <div class="svg-wrapper">
+      <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+        <rect class="shape" height="60" width="320" />
+        <div class="text">Add to Cart</div>
+      </svg>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="main">
+<nav>
+  <ul>
+    <li><a href="#">HOME</a></li>
+    <li><a href="#" class="navsel">HEADPHONES</a></li>
+    <li id="logo">MUSIQUE
+    <li><a href="#">ACCESSORIES</a></li>
+    <li><a href="#">MUSIC</a></li>
+  </ul>
+</nav>
+
+<div id="arrowLeft"></div>
+<div id="arrowRight"></div>
+
+
+<div id="imagegallery">
+    <div id="draggImageGallery">
+   <!-- <div class="product" data-src="bose_isport" data-sku='1'><div class="imageContainer"><img alt="productImg"  src="images/bose_isport_blue.png"></div>
+      <div class="info">
+      <h3 class="pName">BOSE iSport</h3>
+       <span class="dsymb">Price: $</span><span class="price">745</span><button class="view">view</button>
+      </div>   
+    </div>
+     <div data-sku='2'  data-src="hk_soho"  class="product"><div class="imageContainer"><img alt="productImg" src="images/hk_soho_brown.png"></div>
+     <span></span>
+      <div class="info">
+      <h3 class="pName">HK Soho</h3>
+      <span class="dsymb">Price: $</span><span class="price">690</span><button class="view">view</button>
+      </div>      
+  </div>
+    <div data-sku='3' data-src="monster_dna" class="product"><div class="imageContainer"><img alt="productImg" src="images/monster_dna_teal.png"></div>
+    
+       <div class="info">
+      <h3 class="pName">MONSTER DNA</h3>
+     <span class="dsymb">Price: $</span><span class="price">643</span><button class="view">view</button>
+      </div>   
+    </div>
+     <div data-sku='4' data-src="beats_pro" class="product"><div class="imageContainer"><img alt="productImg" src="images/beats_pro_white.png"></div>
+      
+       <div class="info">
+      <h3 class="pName">BEATS Pro</h3>
+     <span class="dsymb">Price: $</span><span class="price">400</span><button class="view">view</button>
+      </div>   
+    </div>
+      <div data-sku='5' data-src="sony_mdxr" class="product"><div class="imageContainer"><img alt="productImg" src="images/sony_mdxr_wood.png"></div>
+      
+       <div class="info">
+      <h3 class="pName">SONY MDXR</h3>
+     <span class="dsymb">Price: $</span><span class="price">390</span><button class="view">view</button>
+      </div>   
+    </div>
+      <div data-sku='6' data-src="beats_swivel" class="product"><div class="imageContainer"><img alt="productImg" src="images/beats_swivel_white.png"></div>
+      
+       <div class="info">
+      <h3 class="pName">BEATS Swivel</h3>
+     <span class="dsymb">Price: $</span><span class="price">520</span><button class="view">view</button>
+      </div>   
+    </div>
+    </div>-->
+</div>
+
+</div>
+<div id="myCartBtnContainer">
+
+<div id="cartIcon"><img id="cIcon" alt="cart" src="images/cart_icon.png"><img alt="plus" id="pIcon" class="p"  src="images/plus.png"></div>
+
+<div class="mc" id="carttext">
+    <span id="mctext">My Cart</span>
+    <span  id="totaltext">$<span id="gtPrice">0</span></span>
+
+</div>
+</div>
+<div id="cartContainer">
+    <div id="cartarrowLeft"></div>
+    <div id="cartarrowRight"></div>
+	<div id="cart"></div>
+</div>
+
+
+<script src="js/cart.js"></script>
+</body>
+</html>

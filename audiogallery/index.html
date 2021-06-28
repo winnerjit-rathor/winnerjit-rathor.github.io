@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Back to Basics</title>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+
+<div id="container">
+<div id="backWood"></div>
+<div id="speaker">
+	<div id="indicator" >
+		<div id="bar1" class="stopAnim"></div>
+		<div id="bar2" class="stopAnim"></div>
+		<div id="bar3" class="stopAnim"></div>
+		<div id="bar4" class="stopAnim"></div>
+		<div id="bar5" class="stopAnim"></div>
+        <div id="bar6" class="stopAnim"></div>
+        <div id="bar7" class="stopAnim"></div>
+	</div>
+</div>
+<div id="dvd_open" class="open"><span id="textIndicator" class="off">CLOSE</span></div>
+<div id="dvd_box">
+<div id="powerIndicatorContainer" ><div id="PowerIndicator" class="red"></div></div>
+<div id="timeIndicator"><span id="timer"></span></div>
+<div id="volumeIndicator">1</div>
+</div>
+</div>
+<div id="remoteContainer">
+<div id="remoteScreen">
+    <span id="off" class=" remoteshow">TURN THE POWER ON!</span>
+    <span id="selectsongspan" class="">SELECT A SONG</span>
+    <span id="optionselect" class="">SELECT PREIVEW OR FULL SONG</span>
+    <span id="previewspan" class="">HOW IS IT? TRY FULL VERSION!</span>
+    <span id="previewsspan" class="">PREVIEW SELECTED</span>
+    <span id="fullsspan" class="">FULL SELECTED</span>
+    <span id="fullspan" class="">FEEL THE MUSIC!</span>
+    <span id="pausespan" class="">TIME FOR A BREAK!</span>
+    <span id="stopspan" class="">DO NOT RUN FROM THE TRUTH!</span>
+</div>
+<div class="Buttoncontainer" id="powerContainer">
+<div class="Button" id="power"><span class="parentCircle"><span class="innerCircle"><span class="buttonLine"><span class="buttonLineIn"></span></span></span></span></div>
+</div>
+<div class="Buttoncontainer" id="playContainer">
+<div class="Button" id="playButton"><span id="play"></span></div>
+</div>
+<div class="Buttoncontainer" id="pauseContainer">
+<div class="Button" id="pauseButton"><span id="pause"><span id="pauseIn"></span></span></div>
+</div>
+<div class="Buttoncontainer" id="stopContainer">
+<div class="Button" id="stopButton" ><span id="stop"></span></div>
+</div>
+<div id="sliderContainer">
+<div id="sliderNumbers">
+<span  data-pos='47'  class="number">1</span>
+<span  data-pos='90'  class="number">2</span>
+<span  data-pos='135' class="number">3</span>
+<span  data-pos='179' class="number">4</span>
+<span  data-pos='223' class="number">5</span>
+</div>
+<div id="pointContainer"><span class="sliderPoint"></span>
+<span class="sliderPoint"></span>
+<span class="sliderPoint"></span>
+<span class="sliderPoint"></span>
+<span class="sliderPoint"></span>
+</div>
+<div id="sliderBack"><span id="rollerFill"></span><span id="roller"></span></div>
+</div>
+</div>
+
+<div id="songsContainer">
+
+<div><span data-song="s1" class="songname">After Dark</span></div>
+<div><span data-song="s2" class="songname">Fired Up</span></div>
+<div><span data-song="s3" class="songname">Home Alone</span></div>
+<div><span data-song="s4" class="songname">I know Now</span></div>
+<div><span  data-song="s5" class="songname">Toxic</span></div>
+<div id="SelectSong">
+Now Playing
+<span data-songselect='' class="selectsongname">No Song Selected</span><span  id="preview">Preview</span><span id="full">Full</span>
+</div>
+
+
+</div>
+
+	<audio>
+    <source data-songNumber='s1_full'   src="music/After_Dark_full.mp3" type="audio/mp3">
+    <source data-songNumber='s1_full'   src="music/After_Dark_full.ogg" type="audio/ogg">
+    </audio>
+    <audio>
+     <source data-songNumber='s1_preview'   src="music/After_Dark_preview.mp3" type="audio/mp3">
+     <source data-songNumber='s1_preview'   src="music/After_Dark_preview.ogg" type="audio/ogg">
+     </audio>
+     <audio>
+     <source data-songNumber='s2_full'   src="music/Fired_Up_full.mp3" type="audio/mp3">
+    <source data-songNumber='s2_full'  src="music/Fired_Up_full.ogg" type="audio/ogg">
+    </audio>
+    <audio>
+    <source data-songNumber='s2_preview'   src="music/Fired_Up_preview.mp3" type="audio/mp3">
+    <source data-songNumber='s2_preveiw'  src="music/Fired_Up_preview.ogg" type="audio/ogg">
+    </audio>
+    <audio>
+    <source data-songNumber='s3_full'   src="music/Home_Alone_full.mp3" type="audio/mp3" type="audio/mp3">
+    <source data-songNumber='s3_full'  src="music/Home_Alone_full.ogg" type="audio/ogg">
+    </audio>
+    <audio>
+    <source data-songNumber='s3_preview'   src="music/Home_Alone_preview.mp3" type="audio/mp3">
+    <source data-songNumber='s3_preveiw'  src="music/Home_Alone_preview.ogg" type="audio/ogg">
+    </audio>
+    <audio>
+    <source data-songNumber='s4_full'   src="music/I_Know_Now_full.mp3" type="audio/mp3">
+    <source data-songNumber='s4_full' type="audio/ogg"  src="music/I_Know_Now_full.ogg">
+    </audio>
+    <audio>
+    <source data-songNumber='s4_preview'   src="music/I_Know_Now_preview.mp3" type="audio/mp3">
+    <source data-songNumber='s4_preveiw' type="audio/ogg"  src="music/I_Know_Now_preview.ogg">
+    </audio>
+    <audio>
+    <source data-songNumber='s5_full'   src="music/Toxic_full.mp3" type="audio/mp3">
+    <source data-songNumber='s5_full' type="audio/ogg"  src="music/Toxic_full.ogg">
+    </audio>
+    <audio>
+    <source data-songNumber='s5_preview'   src="music/Toxic_preview.mp3" type="audio/mp3">
+    <source data-songNumber='s5_preveiw' type="audio/ogg"  src="music/Toxic_preview.ogg">
+    </audio>
+
+<script src="js/music.js"></script>
+</body>
+</html>

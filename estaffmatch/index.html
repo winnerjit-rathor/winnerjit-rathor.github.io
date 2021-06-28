@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- META -->
+	<title>EstaffMatch-Workspace</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width ,initial-scale=1.0, maximum-scale=1.0 ,user-scalable=1">
+	<meta name="description" content="" />
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+	<!-- CSS -->
+	
+   <link rel="stylesheet" type="text/css" href="css/custom.css" media="all" /> 
+   <link rel="stylesheet" type="text/css" href="css/BeatPicker.min.css">
+   <link rel="stylesheet" type="text/css" href="css/timepicki.css">
+  
+	<!-- Javascript -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  
+  
+  <script src="js/jquery.validate.min.js"></script>
+
+ 
+	<script type="text/javascript" src="js/kickstart.js"></script>
+  <script type="text/javascript" src="js/form.js"></script>
+  <script type="text/javascript" src="js/custom-validtion.js"></script>
+  <script type="text/javascript" src="js/BeatPicker.min.js"></script> 
+  <script type="text/javascript" src="js/timepicki.js"></script> 
+
+
+    
+</head>
+<body>
+<div id="UploadLightbox">
+  <div id="uploadContainer">
+    <a id="uploadClose">x</a>
+    <h1 id="uploadHead">Upload a Photo</h1>
+    <p id="uploadblurb">Please upload a image</p>
+    <div id="chooseFileContainer"><input id="uploadFile" type="file"></div>
+      <div id="doneBtn">
+        <button class="subBtn" >Upload</button>
+        <div id="uploadProgress">
+          <span class='progressSuccess'></span>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- Header Start -->
+<div class=" col_12 welcome" id="header">
+  <div class="col_12" id="head">
+    <div class="col_4 logo"  id="logo">
+        <img id="whiteLogo" src="images/logo_wht_800.png" alt="logo">
+        <img  id="blueLogo" src="images/logo_blue_800.png" alt="logo">
+    </div>
+        <div class="menuNav">
+            <img id="whiteNav" src="images/hamburger_white.svg" alt="menu_button">
+            <img id="blueNav" src="images/hamburger_blue.svg" alt="menu_button">
+        </div>
+        <div class="col_4" id="nav">
+          <ul>
+            <li class="current"><a  href="#">Home</a></li>
+            <li><a  href="#">About </a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">SignUp</a></li>
+          </ul>
+        </div>
+  </div>
+  <ul class="Mobilehidden" id="mobileNav">
+      <li class="current"><a  href="">Home</a></li>
+      <li><a  href="">About </a></li>
+      <li><a href="">Log In</a></li>
+      <li><a href="">SignUp</a></li>
+  </ul>
+</div>
+<!-- Header End -->
+<!-- Main Start -->
+<div id="main" class=" grid flex fullHeight" >
+<!--welcome Screens Start-->
+ <div id="welcomeScreens" class=" col_12">
+   <div id="bulbImg">
+    <img src="images/icon_bulb_desk.svg" alt="bulb_desk">
+   </div>
+   <div id="welcomeScreen1">
+    <p>Becoming an eStaffMatch member allows you to be matched with events right down the street from you! Take control of where and when you want to work, and how much you want to make. That’s right, you choose how much you want to get paid! Not bad, eh?</p> 
+
+    <p>Sign up and get started now!</p>
+
+    <div id="welcomeScreen1Btn">
+      <a id="welcome1Btn" href="#">Got It</a>
+    </div>
+   </div>
+
+  <div id="lockImg">
+    <img src="images/icon_lock_desk.svg" alt="lock">
+  </div>
+   <div  id="welcomeScreen2">
+     <p> Just a quick note. By providing us with your information, we are able match you with the perfect event, EVERY TIME! The information you provide us can only be seen by screened event coordinators, and will only be used for employment purposes.</p>
+     
+     <p><a href="#">download privacy policy</a></p>
+
+     <div id="welcomeScreen2Btn"><a id="welcome2Btn" href="#">Get Going</a></div>
+   </div>
+   <div id="trophyImg"><img src="images/icon_trophy_desk.svg" alt="trophy"></div>
+    <div  id="congratsScreen">
+    <p>Congratulations!</p>
+    <p>You’re Now An eStaffMatch Member! You’re one click away from being matched with a great employer!</p>
+     <div id="congratsScreenBtn">
+      <a id="congratsBtn" href="index.html">My Staff Profile</a>
+     </div>
+   </div>
+  </div> 
+  <!--welcome screens end-->
+  <!--form Container start-->
+	<div id="formContainer" class=" col_12" >
+  <!--form Menu start-->
+    <div id="form_menu" class="col_5" >
+      <div class="col_12" >
+        <h1>Profile Menu<a id="menuClose">X</a></h1>
+        <ul class="vertical">
+          <li class="current">
+            <img class="birdBeak" src="images/birdbeak_green.svg" alt="birdbeak">
+            <a data-screen="userInfo">User Info</a>
+          </li>
+          <li class="disabledBtn">
+            <img class="birdBeak" src="images/birdbeak_green.svg"  alt="birdbeak">
+            <a data-screen="contactInfo" >Contact Info</a>
+            <span></span>
+          </li>
+          <li class="disabledBtn">
+            <img class="birdBeak" src="images/birdbeak_green.svg"  alt="birdbeak">
+            <a data-screen="availability" >Availability</a>
+            <span></span>
+          </li>
+          <li class="disabledBtn">
+            <img class="birdBeak" src="images/birdbeak_green.svg"  alt="birdbeak">
+            <a data-screen="experience">Experience</a>
+            <span></span>
+          </li>
+          <li class="disabledBtn">
+            <img class="birdBeak" src="images/birdbeak_green.svg"  alt="birdbeak">
+            <a data-screen="uploads" >Uploads</a>
+            <span></span>
+          </li>
+      	  <li class="disabledBtn">
+            <img class="birdBeak" src="images/birdbeak_green.svg"  alt="birdbeak">
+            <a data-screen="gettingPaid" >Getting Paid</a>
+            <span></span>
+          </li>
+          <li id="finalSubmitContainer">
+            <a id="finalSubmit" >Submit</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--form Menu end--> 
+    <!--progress Bar start--> 
+    <div id="progressBarHolder" class="col_7">
+      <a class=" progressBtn"><span data-screen="userInfo" class=' progressSuccess'></span></a><span class="progressBlock"></span>
+      <a class=" progressBtn"><span data-screen="contactInfo" class='  progressSuccess'></span></a><span class="progressBlock"></span>
+      <a class=" progressBtn"><span data-screen="availability" class=' progressSuccess'></span></a><span class="progressBlock"></span>
+      <a class=" progressBtn"><span data-screen="experience" class=' progressSuccess'></span></a><span class="progressBlock"></span>
+      <a class=" progressBtn"><span data-screen="uploads" class=' progressSuccess'></span></a><span class="progressBlock"></span>
+      <a class=" progressBtn"><span data-screen="gettingPaid"  class=' progressSuccess'></span></a>
+    </div>
+    <!--progress bar end--> 
+    <div id="formMenuBtn" class="col_7"><a  class="formMenuButton">Menu</a></div>
+    <div id="screensContainer" class="col_7" >
+           
+				<div id="userInfo" class="screen activeScreen ">
+                <h4 class="screenHead screenHeadActive" ><img src="images/icon_userinfo.svg" alt="icon availability">User Info</h4> 
+                <form  id="userInfoForm"  method="post" class="vertical">
+                <div class="col_12">
+               		  <div class="field"><input name="fName" id="fName" type="text" placeholder="*First Name" />
+                   
+                    </div>
+                  	<div class="field"><input name="lName" id="lName" type="text" placeholder="*Last Name" />
+                  
+                    </div>
+                    <div class="field"><input name="email" id="email" type="email" placeholder="*Email" />
+                    
+                    </div>
+                    <div class="field"><input name="pass"  id="pass"  type="password" placeholder="*Password" />
+                    
+                    </div>
+                    <div class="field"><input name="cPass" id="cPass" type="password" placeholder="*Confirm Password" />
+                    
+                    </div>
+
+                    <div class="radioContainer">
+                    <div class="radioLeft"><input   type="radio" name="gender" id="male" /> <label for="male" >Male<span></span></label></div>
+                     <div class="radioRight"><input type="radio" name="gender" id="female" /><label for="female">Female<span></span></label></div>
+                    </div>
+                    <div class="labelFields"><label class="leftLabel" >Birthday</label><input name="birthday" id="birthday" type="text" placeholder="*yyyy-Mm-Dd" data-beatpicker="true" data-beatpicker-position="['-30','-300']" />
+                    
+                    </div>
+                   <div class="labelFields"><label class="leftLabel" >Photo</label><button class="uploadBtn" name="photo" id="uploadPhoto" >Upload File</button></div>
+                   <div class="field"><textarea id="aboutMe" name="aboutMe" placeholder="About Me"></textarea></div>
+                    <span class="messageShow" >* Required</span>
+                   <div class="btnHolder" ><button  class="userinfoSub saveBtn subBtn">Save &amp; Exit</button>	<button  class=" userinfoSub nextBtn subBtn">Next</button>	</div>
+              
+                </div>
+                </form>
+				</div>
+				<div id="contactInfo" class="screen"  >
+                <h4 class="contactInfoHead screenHead  nextScreenHead">Contact Info <img src="images/icon_location_white.svg" alt="icon location"></h4>
+                <form id="contactInfoForm" class="vertical">
+                <div class="col_12">
+               		  <div class="field"><input name="address" id="address" type="text" placeholder="Address" />
+                    
+                    </div>
+                  	<div class="field"><input class="fieldLeft" name="city" id="city" type="text" placeholder="*City" /><input name="province" class="fieldRight" id="province" type="text" placeholder="*Province" />
+                   
+                    </div>
+                    <div class="field"><input class="fieldLeft" name="country" id="country" type="text" placeholder="*Country" /><input name="postalCode" class="fieldRight" id="postalCode" type="text" placeholder="*Postal Code" />
+                   
+                    </div>
+                    
+                    <div class="field"><input name="phone" id="phone" type="text" placeholder="Phone Number" /></div>
+                      <span class="messageShow" >* Required</span>
+                    <div class="btnHolder"><button class="contactinfoSub saveBtn subBtn">Save &amp; Exit</button><button  class="contactinfoSub nextBtn subBtn">Next</button></div>	
+            
+                </div>
+                </form>
+				</div>
+				<div id="availability" class="screen">
+                <h4 class="availabilityInfoHead screenHead nextScreenHead">Availability<img src="images/icon_avail_white.svg" alt="icon availability"></h4>
+                <form id="availabilityForm" class="vertical">
+                <div class="col_12">
+                 <div id="fAllDayMain"><div class="availCheckbox"><input type="checkbox"  checked="checked" id="freeAllDaysCheck" name="freeAllDaysCheck" value=""><label class="availCheckboxLabel inline" for="freeAllDaysCheck">Free All Day<span></span></label></div></div>
+                   
+                   <div id="mondayContainer"  class="dayContainer" >
+                	 <h5>Monday<span class="availCheckbox"><input type="checkbox" class="FAD"  id="mondayFAD" name="mondayFAD" value=""><label class="availCheckboxLabel inline" for="mondayFAD" >Free All Day<span></span></label></span></h5>
+               		<div id="mondayField" class="availField"><input class="dayFrom" name="mondayFrom1" id="mondayFrom1" type="text" placeholder="*12 : 59 : AM" /><span>to</span><input name="mondayTo1" class="dayTo"  id="mondayTo1" type="text" placeholder="*12 : 59 : AM" /></div>
+
+               		     <div class="availBtns"><a data-day="monday" class="addRow">+Add Another Row</a></div>
+                    </div>
+                      <div id="tuesdayContainer" class="dayContainer" >  
+               		 <h5>Tuesday<span class="availCheckbox"><input class="FAD"  type="checkbox" id="tuesdayFAD" name="tuesdayFAD"  value=""><label class="availCheckboxLabel inline" for="tuesdayFAD" >Free All Day<span></span></label></span></h5>
+               		<div class="availField"><input name="tuesdayFrom1" id="tuesdayFrom1" class="dayFrom" type="text" placeholder="*12 : 59 : AM" /><span>to</span><input class="dayTo"  name="tuesdayTo1" id="tuesdayTo1" type="text" placeholder="*12 : 59 : AM" /></div>
+                   <div class="availBtns"><a data-day="tuesday" class="addRow">+Add Another Row</a></div>
+                    </div>
+                    <div id="wednesdayContainer" class="dayContainer" >
+               		 <h5>Wednesday<span class="availCheckbox"><input class="FAD"  type="checkbox" id="wednesdayFAD"  name="wednesdayFAD"  value=""><label class="availCheckboxLabel inline" for="wednesdayFAD">Free All Day<span></span></label></span></h5>
+               		<div class="availField"><input name="wednesdayFrom1" id="wednesdayFrom1" class="dayFrom"  type="text" placeholder="*12 : 59 : AM" /><span>to</span><input class="dayTo" name="wednesdayTo1" id="wednesdayTo1" type="text" placeholder="*12 : 59 : AM" /></div>
+                    <div class="availBtns"><a data-day="wednesday"  class="addRow">+Add Another Row</a></div>
+                      </div>
+                     <div id="thursdayContainer" class="dayContainer" >
+               		 <h5>Thursday<span class="availCheckbox"><input  class="FAD"  type="checkbox" id="thursdayFAD" name="thursdayFAD"  value=""><label class="availCheckboxLabel inline" for="thursdayFAD">Free All Day<span></span></label></span></h5>
+               		<div class="availField"><input name="thursdayFrom1" id="thursdayFrom1" class="dayFrom"  type="text" placeholder="*12 : 59 : AM" /><span>to</span><input class="dayTo" name="thursdayTo1" id="thursdayTo1" type="text" placeholder="*12 : 59 : AM" /></div>
+                   <div class="availBtns"><a data-day="thursaday" class="addRow">+Add Another Row</a></div>
+                          </div>
+                    <div id="fridayContainer" class="dayContainer" >
+               		 <h5>Friday<span class="availCheckbox"><input class="FAD"  type="checkbox" id="fridayFAD" name="fridayFAD" value=""><label class="availCheckboxLabel inline" for="fridayFAD" >Free All Day<span></span></label></span></h5>
+               		<div class="availField"><input name="fridayFrom1" id="fridayFrom1" class="dayFrom"  type="text" placeholder="*12 : 59 : AM" /><span>to</span><input class="dayTo" name="fridayTo1" id="fridayTo1" type="text" placeholder="*12 : 59 : AM" /></div>
+                  <div class="availBtns"><a data-day="friday" class="addRow">+Add Another Row</a></div>
+               		</div>
+                     <div id="saturdayContainer" class="dayContainer" >
+                   <h5>Saturday<span class="availCheckbox"><input class="FAD"  type="checkbox" id="saturdayFAD"  name="saturdayFAD"  value=""><label class="availCheckboxLabel inline" for="saturdayFAD">Free All Day<span></span></label></span></h5>
+                    
+               		<div class="availField"><input name="saturdayFrom1"  id="saturdayFrom1" class="dayFrom"  type="text" placeholder="*12 : 59 : AM" /><span>to</span><input name="saturdayTo1" id="saturdayTo1" class="dayTo" type="text" placeholder="*12 : 59 : AM" /></div>
+                  <div class="availBtns"><a data-day="saturday" class="addRow">+Add Another Row</a></div>
+               		</div>
+                   <div id="sundayContainer" class="dayContainer" >
+                  <h5>Sunday<span class="availCheckbox"><input class="FAD"  type="checkbox" id="sundayFAD"  name="sundayFAD"  value=""><label class="availCheckboxLabel inline" for="sundayFAD" >Free All Day<span></span></label></span></h5>
+               		<div class="availField"><input name="sundayFrom1" id="sundayFrom1" class="dayFrom"  type="text" placeholder="*12 : 59 : AM" /><span>to</span><input class="dayTo" name="sundayTo1"  id="sundayTo1" type="text" placeholder="*12 : 59 : AM" /></div>
+                   <div class="availBtns"><a data-day="sunday" class="addRow">+Add Another Row</a></div>
+                    </div>
+
+                    <div id="sameAllDayMain"> <div class="availCheckbox"><input type="checkbox" checked id="sameAllDays" name="sameAllDays" value="Bike"><label  class="availCheckboxLabel inline" for="sameAllDays" >Same for All Days<span></span></label></div></div>
+                     <span class="messageShow" >* Required</span>
+                    <div class="btnHolder"><button class="saveBtn subBtn">Save &amp; Exit</button><button  class="availabilitySub nextBtn subBtn">Next</button></div>	
+            
+                </div>
+                </form>
+				</div>
+				<div id="experience" class="screen">
+                <h4 class="experienceInfoHead screenHead nextScreenHead">Experience<img src="images/icon_experience_white.svg" alt="icon availability"></h4>
+                <form id="experienceForm" class="vertical">
+                <div class="col_12">
+                <input name="priorExperience" id="priorExperience" checked type="checkbox" ><label for="priorExperience" class="pi">Prior Experience?<span></span></label>
+                <div class="experienceRow">
+               		<div class="field"><input class="companyName" id="companyName1" name="companyName1" type="text" placeholder="*Company name" /></div>
+                  	<div class="field"><select class="toi" id="toi1" name="toi1">
+                  	<option value="">*Type of Industry</option>
+                    <option value="1">Hotel Services</option>
+                    <option value="2">Restaurant Services</option>
+                    <option value="3">Banquet Services</option>
+                    <option value="4">Catering Services</option>
+                    <option value="5">Other Food Establishments</option>
+                    <option value="6">Other</option>
+                    
+                  	</select></div>
+                   <div class="companyStartContainer"><input class="companyStart" name="companyStart1" id="companyStart1" type="text" placeholder="*Start Date" /></div><span class="spanIn">to</span><div class="companyEndContainer" ><input class="companyEnd" name="companyEnd1" id="companyEnd1" type="text" placeholder="*End Date" /></div>
+                 </div>
+                   <a class="addExperience">+Add Another Row</a>
+                    <span class="messageShow" >* Required</span>
+                    <div class="btnHolder"><button  class="experienceSub saveBtn subBtn">Save &amp; Exit</button><button  class="experienceSub nextBtn subBtn">Next</button></div>	
+            
+                </div>
+                </form>
+				</div>
+        <div id="uploads" class="screen ">
+                <h4 class="uploadsInfoHead screenHead nextScreenHead"> <img src="images/icon_upload_white.svg" alt="icon availability">Uploads</h4> 
+                <form id="uploadsForm" class="vertical">
+                <div class="col_12">
+                <h4>Smart Serve</h4>
+                 <div class="btnContainer"> <input class="fileValues" id="smartServeFile" name="smartServeFile" type="text"> <button name="smartServe" id="smartServe" class="uploadBtn">*Upload File</button>
+                
+                 </div>
+                   <h4>Media</h4>
+                    
+                     <div class="btnContainer"> <input class="fileValues" type="text"> <button id="videoUpload" class="uploadBtn">Upload a Video of Yourself</button> </div>
+                      <h4>Additional Assets</h4>
+                      <div class="btnContainer"> <input class="fileValues" type="text"><button id="foodAndBeverages" class="uploadBtn">Food and Beverages server Certificate</button></div>
+                      <div class="btnContainer"><input class="fileValues" type="text"> <button id="WinerServer" class="uploadBtn">Wine Server Certificate</button></div>
+                      <div class="btnContainer"> <input class="fileValues" type="text"><button id="bartendersLicense" class="uploadBtn">Bartenders License</button></div>
+                      <div class="btnContainer"><input class="fileValues" type="text"> <button id="safetyTraining" class="uploadBtn">Safety Training</button></div>
+                      <div class="btnContainer"> <input class="fileValues" type="text"><button id="dl" class="uploadBtn"> Drivers License/ Heath Card</button></div>
+                      <div class="btnContainer"> <input class="fileValues" type="text"><button id="others" class="uploadBtn">Other</button></div>
+                     <div class="btnHolder"><button class="saveBtn subBtn">Save &amp; Exit</button><button  class="nextBtn subBtn uploadsSub">Next</button></div>    
+            
+                </div>
+                </form>
+        </div>
+				<div id="gettingPaid" class="screen" >
+                <h4 class="gettingPaidHead screenHead nextScreenHead"><img src="images/icon_paid_white.svg" alt="icon availability">Getting Paid</h4> 
+                <form id="gettingPaidForm" class="vertical">
+                <div class="col_12">
+                <h4>Billing Address</h4>
+              
+                <div class="availCheckbox"><input type="checkbox"  id="sameAddress" name="sameAddress" value="Bike"><label  class="inline availCheckboxLabel" for="sameAddress" >Same as Mailing Address?<span></span></label></div>
+                    <div class="field"><input name="billAddress"     id="billAddress" type="text" placeholder="Address" /></div>
+                    <div class="field"><input name="billCity"        id="billCity" type="text" placeholder="City" /></div>
+                    <div class="field"><input name="billCountry"     id="billCountry" type="text" placeholder="Country" /></div>
+                   <div class="field"> <input name="billPostalCode"  id="billPostalCode" type="text" placeholder="Postal Code" /></div>
+                  <h4>Payment Information</h4>
+                  <div class="field"><select name="cardType"   id="cardType" >
+                    <option>Credit Card Type</option>
+                    <option value="visa">Visa</option>
+                    <option value="mc">MasterCard</option>
+                     <option value="ae">American Express</option>
+                    </select></div>
+                 <div class="field"> <input name="cardNumber"   id="cardNumber"   type="text" placeholder="Credit Card Number" /></div>
+                    <div class="field"><input name="cardDate"  id="cardDate" type="text" placeholder="Exp. Date" /></div>
+                    <div class="field"><input name="cardSecurity" id="cardSecurity" type="text" placeholder="Security #" /></div>
+                     <span class="messageShow" >* Required</span>
+                    <div class="btnHolder"><button class="saveBtn subBtn">Save &amp; Exit</button><button  class="nextBtn subBtn gettingPaidSub">Next</button></div>    
+            
+                </div>
+                </form>
+        </div>
+                <div id="review" class="screen" >
+                <h4 class="reviewInfoHead screenHead nextScreenHead">Review</h4> 
+            
+                </div>
+               
+        </div>
+			</div>
+</div> 
+
+<!-- End Grid -->
+
+
+</html>

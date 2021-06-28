@@ -1,0 +1,1490 @@
+
+@import url(kickstart.css);
+@import url(style.css);
+
+/** FONTS **/
+
+/* done by liam */
+@font-face {
+    font-family: 'gotham_medium';
+    src: url('../fonts/copyfonts.com_gotham-medium-webfont.eot');
+    src: url('../fonts/copyfonts.com_gotham-medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/copyfonts.com_gotham-medium-webfont.woff2') format('woff2'),
+    url('../fonts/copyfonts.com_gotham-medium-webfont.woff') format('woff'),
+    url('../fonts/copyfonts.com_gotham-medium-webfont.ttf') format('truetype'),
+    url('../fonts/copyfonts.com_gotham-medium-webfont.svg#gotham_mediumregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* done by liam */
+@font-face {
+    font-family: 'gotham_book';
+    src: url('../fonts/copyfonts.com_gotham-book-webfont.eot');
+    src: url('../fonts/copyfonts.com_gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/copyfonts.com_gotham-book-webfont.woff2') format('woff2'),
+    url('../fonts/copyfonts.com_gotham-book-webfont.woff') format('woff'),
+    url('../fonts/copyfonts.com_gotham-book-webfont.ttf') format('truetype'),
+    url('../fonts/copyfonts.com_gotham-book-webfont.svg#gotham_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/** DEFAULT MOBILE  **/
+
+body
+{
+background-image: url('../images/background_tab.svg');
+background-size: cover;
+background-position: top left;
+background-repeat: no-repeat;
+}
+
+#birthday{
+    background-position: center right 2%;
+}
+#header
+{
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    background-color: #3285e1;
+    float: none;
+}
+#head
+{
+    position: relative;
+    float: none;
+    width: 100%;
+    max-width: 1024px;
+    height: 100px;
+    margin: 0 auto;
+}
+#nav{
+        display: none;
+    }
+/* done by liam */
+.menuTitle {
+    font-family: "gotham_medium", verdana, arial, sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    padding-left: 5%;
+}
+.messageShow{
+    margin-left: 5%;
+color: #3285e1;
+}
+}
+
+.logo {
+    float: left;
+    width: 65%;
+    margin: 0;
+    padding: 0;
+    max-width: 350px;
+}
+
+/* done by liam */
+.logo img {
+    width: 80%;
+}
+
+/* done by liam */
+.menuNav {
+    cursor: pointer;
+    float: right;
+    cursor: pointer;
+    position: relative;
+
+
+margin: 35px 5% 0 0;
+}
+
+#nav
+{
+    position: absolute;
+    right: 2em;
+    bottom: 0;
+}
+#logo
+{
+    position: absolute;
+    bottom: 0;
+    left: 1.3em;
+
+    height: 61px;
+}
+
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width   : 28px;
+  margin  : 0;
+  padding : 0;
+  opacity : 0;
+
+}
+
+
+#form_menu
+{
+    position: absolute;
+    left: -100vw;
+
+    width: 100%;
+    height: calc(100vh - 120px);
+    min-height: 322px;
+    padding: 0;
+    margin:0;
+    top:18.3px;
+}
+#formContainer
+{
+    position: relative;
+    -webkit-transition:-webkit-transform 0.3s;
+    padding: 0;
+    margin:0;
+    min-height: calc(100vh - 100px)
+}
+#formContainer.menuActive
+{
+    -webkit-transform: translateX(100vw);
+     -moz-transform: translateX(100vw);
+      transform: translateX(100vw);
+}
+#nav
+{
+    overflow: hidden;
+
+    height: 0;
+}
+#formMenuBtn
+{
+    position: absolute;
+left: -10px !important;
+z-index: 20;
+cursor: pointer;
+top: 30px;
+
+}
+#form_menu h1
+{
+    height: 40px;
+    width:100%;
+    font-size: 16px;
+    background-color: #3285e1;
+    margin:0;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: #FFF;
+    position: relative;
+    font-family: "gotham_medium", verdana, arial, sans-serif;
+    font-size: 20px;
+
+}
+#formMenuBtn a
+{
+    position: absolute;
+    right: 10px !important;
+    font-size: 18px;
+    color: #FFF;
+    border-bottom: 1px solid white;
+}
+
+#screensContainer
+{
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+margin: 0;
+margin-top: -2px;
+
+}
+#birthday,
+#uploadFile
+{
+   
+    width: 75%;
+margin-left: 5%;
+}
+
+
+ .screen
+    {
+        overflow: hidden;
+        background-color: #FFF;
+        padding: 0;
+margin: 0;
+
+border-radius: 6px 6px 0 0;
+
+    }
+    .activeScreen
+    {
+
+    }
+
+#main
+{
+    margin:0 auto; max-width:1024px; overflow:hidden; padding: 0;
+    
+}
+#main.fullHeight
+{
+    height: calc( 100vh - 100px)
+}
+
+/* done by liam */
+h4.screenHead
+{
+    height: 40px;
+    padding: 5px 5%;
+    font-size: 20px;
+    margin:-2px 0 10px ;
+    color: #FFF;
+    font-family: "gotham_medium", verdana, arial, sans-serif;
+
+}
+
+h4.screenHead img {
+    float: left;
+    height: 90%;
+    padding-top: 1%;
+    padding-right: 2%;
+}
+
+/* done by liam */
+.formMenuButton {
+    font-family: "gotham_book", verdana, arial, sans-serif;
+    color: #e5e5e5;
+}
+
+h4.nextScreenHead
+{
+   
+    background-color: rgba(50,133,229,0.5);
+   
+}
+h4.screenHeadActive
+{
+     background-color: #3285e1;
+}
+
+h4.screenHeadActive img
+{
+    background-color: #3285e1;
+   
+}
+
+ .btnHolder
+    {
+        width:90%;
+        margin: 10px auto;
+        position: relative;
+        height: 37px;
+    }
+    .subBtn
+    {
+        background-color: #2ecc71;
+        color: #FFF; 
+        border: 1px solid #00a651;
+    }
+   
+
+/* done by liam */
+    .saveBtn
+    {
+        left: 0;
+        position: absolute;
+        width: 48%;
+        font-family: "gotham_medium",verdana, arial, sans-serif;
+    }
+
+/* done by liam */
+    .nextBtn
+    {
+        right: 0;
+        position: absolute;
+        width: 48%;
+        font-family: "gotham_medium",verdana, arial, sans-serif;
+
+    }
+
+    #progressBarHolder
+    {
+        padding:10px 0;
+        margin: 0;
+        background-color: #3285e1;
+        position: relative;;
+        z-index: 14;
+        height: 30px;
+    }
+    .progressBtn
+    {
+       width: calc(15% - 8.2px);
+        height: 10px;
+        float: left;
+        display: block;
+        background-color: #a3a3a3;
+        position: relative;
+        overflow: hidden;
+
+
+    }
+ 
+    .progressBtn:nth-of-type(2n)
+    {
+        background-color: #e6e7e8;
+    }
+    .progressBlock
+    {
+        width: 14px;
+height: 14px;
+float: left;
+background-color: grey;
+border: 4px solid #FFF;
+border-radius: 10px;
+display: block;
+margin-left: -2px;
+margin-right: -2px;
+position: relative;
+z-index: 12;
+margin-top: -2px;
+
+    }
+    .progressSuccess
+    {
+        background-color: #2ecc71;
+         height: 10px;
+         position: absolute;
+         left: 0;
+         top: 0;
+         z-index: 11;
+    }
+    .progressBtn:nth-of-type(1)
+    {
+        border-radius: 5px 0 0 5px;
+        margin-left: 5%;
+    }
+     .progressBtn:last-of-type
+     {
+border-radius: 0 5px 5px 0;
+        
+     }
+     input.fileValues
+     {
+        opacity: 0 !important;
+        height: 0 !important;
+        position: absolute;
+     }
+        .beatpicker-clear{
+            display: none;
+        }
+   .availField
+   {
+    width:90%;
+    height: 35px;
+    margin: 5px auto;
+
+   }
+   .availField input
+   {
+    width: 100% !important;
+    float: left;
+   }
+   .availField span
+   {
+    width: 20% !important;
+    float: left;
+    text-align: center;
+    color: #3285e1;
+    font-weight: 800;
+   }
+   #availability h5
+   {
+    font-size: 18px;
+    width: 90%;
+    margin: 5px auto;
+    padding-left:10px; 
+    color: #3285e1;
+    font-weight: 800;
+   }
+    #availability a.addRow
+   {
+        float: right;
+        font-size: 12px;
+        color: #5ab6f9;
+   }
+   .addRow
+   {
+    cursor: pointer;
+   }
+
+/* done by liam */
+   .heading {
+       font-family: "gotham_medium", verdana, arial, sans-serif;
+       font-size: 1.5em;
+       color: #3285e1;
+       padding-left: 5%;
+   }
+
+/* done by liam */
+    .headingSmall {
+        font-family: "gotham_book", verdana, arial, sans-serif;
+        font-size: 1em;
+        color: #3285e1;
+        padding-left: 5%;
+    }
+
+/* done by liam */
+   .radioContainer
+   {
+    width: 90%;
+   
+    height: 20px;
+    padding-left: 5%;
+
+   }
+   .radioLeft
+   {
+    width: 100px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    float: left;
+   }
+    .radioRight
+   {
+    width: 100px;
+    float: left;
+   }
+
+/* done by liam */
+   .radioLeft label , .radioRight label
+   {
+    width: 60px;
+    margin-right: 10px;
+    float: left;
+    font-family: "gotham_book",verdana, arial, sans-serif;
+    color: #3285e1;
+   }
+
+   .experienceLabel {
+       margin-left: 5% !important;
+
+   }
+#bulbImg
+{
+    display: none;
+}
+#lockImg ,  #trophyImg
+{
+    display: none;
+}
+/* done by liam */
+   div.labelFields
+   {
+    width: 90%;
+    margin:0 auto 10px;
+    position: relative;
+    overflow: hidden;
+    font-family: "gotham_book",verdana, arial, sans-serif;
+    color: #3285e1;
+
+   }
+   .leftLabel
+   {
+        width:20%;
+        float: left;
+        height: 35px;
+   }
+   .labelFields input 
+   {
+    width: 80%;
+    float: left;
+    
+   }
+   .labelFields button
+   {
+   width: 75%;
+margin-left: 5%;
+vertical-align: middle;
+padding-top: 5px;
+
+   }
+   .birdBeak
+   {
+    height: 39px !important;
+position: absolute;
+top: 0px;
+width: 0;
+   }
+   .availCheckbox
+   {
+    width: 90%;
+    margin:0 auto 10px;
+    height: 20px;
+    display: block;
+    
+   }
+   .availBtns , #fAllDayMain , #sameAllDayMain
+   {
+    overflow: hidden;
+    width: 90%;
+    margin:0 auto;
+}
+   .availBtns .availCheckbox , #fAllDayMain .availCheckbox , #sameAllDayMain .availCheckbox
+   {
+    width: 150px;
+    float: left;
+
+   }
+   #uploads h4:not(.screenHead) , #gettingPaid h4:not(.screenHead)
+   {
+    font-family: "gotham_medium", verdana, arial, sans-serif;
+font-size: 20px;
+padding-left: 5%;
+color: #3285e1;
+   }
+   #uploads label
+   {
+    padding-left: 5%;
+   }
+/* done by liam */
+    label.availCheckboxLabel
+   {
+    width: 80%;
+    float: left;
+    color: #3285e1;
+    font-family: "gotham_book", verdana, arial, sans-serif;
+   } 
+
+    .availBtns .availCheckbox label.availCheckboxLabel , #fAllDayMain .availCheckbox label.availCheckboxLabel , #sameAllDayMain .availCheckbox label.availCheckboxLabel
+    {
+    width: auto;
+    float: left;
+   }
+
+/* done by liam */
+   .availCheckbox input
+   {
+    
+    float: right;
+    margin-top: 4px !important;
+   }
+
+    .availField
+    {
+        display: none;
+    }
+    .availBtns
+    {
+        display: none;
+    }
+
+/* done by liam */
+    #availability h5
+    {
+        display: none;
+        font-family: "gotham_book", verdana, arial, sans-serif;
+        position: relative;
+    }
+    #availability h5 .availCheckbox
+    {
+       width:40%;
+       right: 0;
+        font-weight: normal;
+        position: absolute;
+        top:0;
+        font-size: 15px;
+    }
+   #form_menu ul
+   {
+    margin: 0;
+    border: 1px solid  #3285e1; 
+   }
+   #form_menu li
+   {
+        width:100%;
+        min-height: 40px;
+        background-color: #fff;
+        border-bottom: 1px solid  #3285e1; 
+        list-style: none;
+        position: relative;
+        cursor: pointer;
+   }
+   #form_menu li:last-of-type
+   {
+    border-bottom: 0px; 
+   }
+
+  #form_menu  li#finalSubmitContainer
+{
+   background-color: #2ecc71;
+color: #FFF;
+border: 1px solid #00a651;
+background-image: none;
+display: none;
+}
+a#finalSubmit 
+{
+    color: #FFF;
+    background-image: none !important;
+}
+       label.pi
+    {
+        width: 150px;
+display: block;
+float: left;
+margin-left: 5%;
+margin-bottom: 10px;
+}
+  a.addExperience
+  {
+    display: block;
+    margin-left: 5%;
+    clear: both;
+  }
+
+  .spanIn{
+    width: 20% !important;
+float: left;
+text-align: center;
+color: #3285e1;
+font-weight: 800;
+
+  }
+   /* done by liam */
+     #form_menu li a
+    {
+        background-image: url('../images/menu_x.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+    }
+    #form_menu li a.done
+    {
+        background-image: url('../images/menu_check.svg');
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: auto 90%;
+    }
+    #form_menu li a
+    {
+        width:calc(100% - 10px);
+        height: 100%;
+        display: block;
+        padding-left: 10px;
+        padding-top: 5px;
+        font-family: "gotham_book", verdana, arial, sans-serif;
+        font-size: 20px;
+    }
+        #form_menu li.current .birdBeak
+    {
+       width:auto;
+    }
+     #form_menu li.current a 
+    {
+       padding-left: 25px
+    }
+    
+    #form_menu li span
+    {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        opacity: 0.2;
+        background-color: #333;
+        display:none;
+    }
+     #form_menu li.disabledBtn span
+     {
+        display: block;
+        
+     }
+       #form_menu li.disabledBtn 
+     {
+        
+         cursor: default;
+     }
+     
+     #form_menu li.disabledBtn a
+     {
+        color: #e6e7e8;
+     }
+
+     #menuClose  
+     {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right:10px;
+        font-family: "gotham_book", verdana, arial, sans-serif;
+        font-size: 20px;
+        color: #FFF;
+        font-weight: 500;
+        padding-top: 0px;
+        cursor: pointer;
+
+     }
+     #uploadClose
+     {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right:10px;
+        font-family: "gotham_book", verdana, arial, sans-serif;
+        font-size: 20px;
+        color: #000;
+        font-weight: 500;
+        padding-top: 0px;
+        cursor: pointer;
+        z-index: 300000;
+
+     }
+
+    .field
+    {
+        position: relative;
+        overflow: hidden;
+        clear: both;
+    }
+
+    input.fieldLeft , input.fieldRight
+    {
+        width:43% !important;
+    }
+
+    input.fieldLeft
+    {
+        float: left;
+        margin-left: 5% !important;
+    }
+    input.fieldRight
+    {
+        float: right;
+        margin-right: 5% !important;
+    }
+    label.error{
+    position: absolute;
+    background: #88b7d5;
+    
+    color: #FFF;
+background-color: #3285e1;
+padding: 0 3px;
+position: absolute;
+top: 38px;
+right: 5%;
+display: block;
+left: auto;
+border-radius: 3px;
+z-index: 2;
+}
+label.error:after, label.error:before {
+    bottom: 100%;
+    right: 20%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+
+label.error:after {
+   
+    border-bottom-color: #3285e1;
+    border-width: 5px;
+    margin-left: -5px;
+}
+label.error:before {
+  
+    border-bottom-color: #3285e1;
+    border-width: 5px;
+    margin-left: -5px;
+}
+label#country-error , label#city-error
+{
+    right: auto;
+    left: 5%;
+}
+.btnContainer button
+{
+    height: 35px;
+    background: none;
+    width: 90%;
+    margin:0 auto;
+    display: block;
+    
+}
+.btnContainer
+{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+#UploadLightbox
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 50000;
+    display: none;
+}
+#uploadContainer
+{
+    width: 90%;
+    height: auto;
+    max-width: 500px;
+    margin:0 auto;
+    position: absolute;
+    margin-left: -250px;
+    left: 50%;
+    background-color: #FFF;
+    height: 200px;
+    top: 50%;
+    margin-top: -105px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+#uploadContainer div, #uploadContainer p , #uploadContainer h1
+{
+    width: 90%;
+    margin:0 auto;
+    margin-bottom: 10px;
+    position: relative;
+}
+#uploadContainer h1
+{
+     width: 70%;
+     margin-left: 5%;
+}
+#uploadContainer  div#uploadProgress
+    {
+        height: 10px;
+position: absolute;
+left: 100px;
+width: 75%;
+background-color: #e6e7e8;
+top: 12px;
+border-radius: 10px;
+overflow: hidden;
+
+    }
+    .progressBtnDone
+    {
+        cursor: pointer;
+    }
+#uploadHead
+{
+    font-size: 24px;
+}
+#welcomeScreens
+{
+    width: 100%;
+    margin:0 auto;
+    float: none;
+    padding:0;
+    background-color: #FFF;
+    overflow: hidden;
+    height:calc( 100vh - 100px ); 
+    position: relative;
+}
+#welcomeScreen1 , #welcomeScreen2 , #congratsScreen
+{
+    
+background-size: 100% 100%;
+background-repeat: no-repeat;
+width: 300px;
+padding-bottom: 30px;
+padding-top: 30px;
+height: 370px;
+position: absolute;
+bottom: 15px;
+right: -15px;
+}
+
+#welcomeScreen1  {
+     background-image: url('../images/welcome_blue.svg') ; 
+  background-size: 100% 100%;
+  background-position: center center;
+}
+ #congratsScreen
+ {
+    display: none;
+     background-size: 100% 100%;
+      background-image: url('../images/congrats_blue.svg') ; 
+      background-position: center center;
+ }
+#welcomeScreen2 {
+     background-image: url('../images/welcome_green.svg'); 
+   background-size: 100% 100%;
+   display: none;
+    background-position: center center;
+}
+#welcomeScreen1 p , #welcomeScreen2 p , #congratsScreen p
+{
+    width: 80%;
+margin: 0 auto;
+margin-left: 10px;
+font-family: "gotham_book", verdana, arial, sans-serif;
+color: #FFF;
+font-size:15px;
+
+}
+
+#welcomeScreen1Btn , #welcomeScreen2Btn ,  #congratsScreenBtn
+{
+background-size: 100% 100%;
+background-repeat: no-repeat;
+width: 300px;
+padding-bottom: 30px;
+padding-top: 30px;
+height: 100px;
+position: absolute;
+bottom: -20px;
+right: -20px;
+
+}
+#welcomeScreen1Btn  a , #welcomeScreen2Btn a , #congratsScreenBtn a
+{
+    position: absolute;
+top: 5px;
+left: 6px;
+width: 212px;
+height: 63px;
+text-align: center;
+vertical-align: center;
+font-family: "gotham_medium", verdana, arial, sans-serif;
+color: #FFF;
+font-size: 24px;
+text-decoration: none;
+padding-top: 18px;
+} 
+#welcomeScreen1Btn , #congratsScreenBtn
+{
+    background: url('../images/button_green.svg') no-repeat center center ; 
+}
+#welcomeScreen2Btn
+{
+    background: url('../images/button_blue.svg') no-repeat center center ; 
+}
+
+#header img#whiteLogo
+{
+    display: block;
+}
+#header img#blueLogo
+{
+    display: none;
+}
+#header img#whiteNav
+{
+    display: block;
+}
+#header img#blueNav
+{
+    display: none;
+}
+ #header.welcome ,  #header.welcome2 ,  #header.congrats
+ {
+     background-color: #FFF;
+ }
+
+
+ #header.welcome #whiteLogo , #header.welcome2 #whiteLogo , #header.congrats #whiteLogo
+{
+    display: none;
+}
+#header.welcome #blueLogo , #header.welcome2 #blueLogo , #header.congrats #blueLogo
+{
+    display: block;
+}
+ #header.welcome #whiteNav ,  #header.welcome2 #whiteNav ,  #header.congrats #whiteNav
+{
+    display: none;
+}
+#header.welcome #blueNav , #header.welcome2 #blueNav , #header.congrats #blueNav
+{
+    display: block;
+}
+#formContainer
+{
+    display: none;
+}
+
+#nav ul{
+    width:360px;
+}
+#nav
+{
+    min-width: 360px;
+}
+#nav ul li{
+    width:20%;
+    margin:0 1%;
+    float: left;
+    list-style: none;
+
+}
+#nav ul li a{
+    color:#FFF;
+    }
+/* PRE-TABLET PORTRAIT */
+/* done by liam */
+
+#mobileNav
+{
+    width: 200px;
+    position: absolute;
+    right:5%;
+    top:74px;
+    z-index: 3000;
+    display: none;
+}
+#mobileNav  li
+{
+    list-style: none;
+    height:40px;
+    padding:0;
+    border-bottom:1px solid #3285e1; 
+}
+#mobileNav  li a
+{
+    height: 35px;
+    padding-top:10px;
+    padding-bottom: 2.5px;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+#header #mobileNav
+{
+    background-color:#FFF;
+    border:0px solid #3285e1; 
+    border-top:none;
+}
+#header.welcome #mobileNav , #header.welcome2 #mobileNav, #header.congrats #mobileNav
+{
+    background-color:#FFF;
+    border:1px solid #3285e1; 
+}
+button.uploadBtn{
+    text-align: left;
+}
+ .message , .messageRight , .availField span.message 
+    {
+        position: absolute;
+
+color:#929292;
+
+padding: 0 3px;
+position: absolute;
+top:34px;
+left: auto;
+display: block;
+right: 5%;
+border-radius: 3px;
+font-weight: normal !important;
+width: auto !important;
+    }
+    .messageLeft
+    {
+
+color: #929292;
+
+padding: 0 3px;
+position: absolute;
+top: 34px;
+right: auto;
+display: block;
+left: 5%;
+border-radius: 3px;
+    }
+    .companyStartContainer
+    {
+        position: relative;
+float: left;
+width: 37.5%;
+margin-left:2.5%;
+;
+    }
+    .companyEndContainer
+    {
+        position: relative;
+width: 37.5%;
+margin-right:2.5%;
+float: right;
+    }
+/* TABLET PORTRAIT */
+@media screen and (min-width:650px)
+{
+    body {
+        padding-bottom: 0;
+    }
+    #form_menu
+    {
+        position: absolute;
+        left: calc(-300px);
+
+        width: 300px;
+    }
+#form_menu h1
+{
+    background-color: transparent;
+}
+    /* done by liam */
+    .menuNav {
+        cursor: pointer;
+float: right;
+cursor: pointer;
+margin: 35px 5% 0 0;
+    }
+
+    #formContainer
+    {
+        position: relative;
+      
+    }
+    #formContainer.menuActive
+    {
+        -webkit-transform: translateX(calc(300px));
+        -moz-transform: translateX(calc(300px));
+        transform: translateX(calc(300px));
+    }
+    #form_menu li
+    {
+        display: block;
+        cursor: pointer;
+    }
+    #header
+    {
+        height: auto;
+        min-height: 100px;
+        background-color: transparent;
+    }
+    #mobileNav
+    {
+       
+    }
+    #nav
+    {
+        position: absolute;
+        right: 2em;
+        bottom: 0;
+
+        height: auto;
+    }
+   #welcomeScreens
+{
+    width: 100%;
+    margin:0 auto;
+    float: none;
+    padding:0;
+   
+    overflow: hidden;
+    height:calc( 100vh - 100px ); 
+    position: relative;
+    background-color: #3285e1;
+}
+#welcomeScreen1 , #welcomeScreen2 , #congratsScreen
+{
+    
+background-size: 100% 100%;
+background-repeat: no-repeat;
+width: 600px;
+padding-bottom: 30px;
+padding-top: 170px;
+height: 670px;
+position: absolute;
+bottom: 0px;
+right: -49px;
+font-size: 22px;
+line-height: 160%;
+
+}
+
+#welcomeScreen1  {
+     background-image: url('../images/welcome_white_tab.svg') ; 
+  background-size: 100% 100%;
+  background-position: center center;
+}
+ #congratsScreen {
+     background-image: url('../images/congrats_tab.svg') ; 
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#welcomeScreen2 {
+     background-image: url('../images/welcome_lock_tab.svg'); 
+   background-size: 100% 100%;
+   display: none;
+}
+#welcomeScreen1 p , #welcomeScreen2 p , #congratsScreen p
+{
+width: 70%;
+margin: 0 auto;
+margin-left: 60px;
+color:#3285e1;
+font-size: 18px;
+
+}
+
+#welcomeScreen1Btn , #welcomeScreen2Btn , #congratsScreenBtn 
+{
+background-size: 100% 100%;
+background-repeat: no-repeat;
+width: 500px;
+padding-bottom: 30px;
+padding-top: 30px;
+height: 200px;
+position: absolute;
+bottom: -60px;
+right: 60px;
+
+
+}
+#welcomeScreen1Btn  a , #welcomeScreen2Btn a , #congratsScreenBtn a
+{
+position: absolute;
+top: 15px;
+left: 5px;
+width: 325px;
+height: 83px;
+text-align: center;
+vertical-align: center;
+font-size:28px;
+padding-top: 25px;
+
+} 
+#welcomeScreen1Btn , #congratsScreenBtn
+{
+    background-image: url('../images/button_green_tab.svg') ; 
+}
+#welcomeScreen2Btn
+{
+    background-image: url('../images/button_green_tab.svg'); 
+}
+   
+}
+
+/* TABLET LANDSCAPE + DESKTOP */
+
+
+@media screen and (min-width:769px)
+{
+    body
+    {
+        padding-bottom: 0;
+    }
+  
+    #nav{
+        display: block;
+    }
+    #menuClose
+    {
+        display: none;
+    }
+    #progressBarHolder
+    {
+        display: none;
+    }
+    #form_menu
+    {
+        position: absolute;
+        left: 0;
+
+        width: 350px;
+
+    }
+
+    /* done by liam */
+    .menuNav {
+        display: none;
+
+    }
+    #mobileNav
+    {
+        display:none!important;
+    }
+    #formContainer
+    {
+        margin-top:50px;
+          margin-bottom: 100px;
+    }
+
+    #formContainer.menuActive
+    {
+        -webkit-transform: translateX(calc(0px));
+        -moz-transform: translateX(calc(0px));
+        transform: translateX(calc(0px));
+    }
+
+            #screensContainer {
+
+        max-width: 600px;
+        width:calc(100% - 350px);
+        float:right;
+        }
+
+        #progressBarHolder {
+
+        max-width: 600px;
+        width:calc(100% - 350px);
+         float:right;
+
+        }
+        #formMenuBtn {
+right: 2.5% !important;
+left: auto !important;
+top: 0px;
+display: none;
+}
+
+
+        #welcomeScreens
+{
+    width: 100%;
+    max-width: 1024px;
+
+    margin:0 auto;
+    float: none;
+    padding:0;
+   
+    overflow: hidden;
+    height:calc( 100vh - 100px ); 
+    position: relative;
+    background-color: transparent;
+}
+#welcomeScreen1 , #welcomeScreen2 , #congratsScreen
+{
+    
+background-repeat: no-repeat;
+max-width: 500px;
+padding-bottom: 30px;
+padding-top: 170px;
+height: 600px;
+position: absolute;
+bottom: auto;
+right: 4.5%;
+font-size: 18px;
+top: -20px;
+line-height: 160%;
+width: 55%;
+}
+
+#welcomeScreen1 , #congratsScreen {
+     background-image: url('../images/welcome_white_desk.svg') ; 
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#welcomeScreen2 {
+     background-image: url('../images/welcome_white_desk.svg')  ; 
+   background-size: 100% 70%;
+   display: none;
+     background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#welcomeScreen1 p , #welcomeScreen2 p , #congratsScreen p
+{
+width: 80%;
+margin: 0 auto;
+margin-left: 10%;
+}
+
+#welcomeScreen1Btn , #welcomeScreen2Btn  , #congratsScreenBtn
+{
+background-size: 100% 100%;
+background-repeat: no-repeat;
+width: 500px;
+padding-bottom: 30px;
+padding-top: 30px;
+height: 200px;
+position: absolute;
+bottom: -60px;
+right: auto;
+left:0;
+
+
+}
+#welcomeScreen1Btn  a , #welcomeScreen2Btn a , #congratsScreen a
+{
+position: absolute;
+top: 35px;
+left: 0%;
+width: 280px;
+height:80px;
+text-align: center;
+vertical-align: center;
+background-color: #2ecc71;
+border:1px solid #00a651 ;
+border-radius:6px;
+} 
+#welcomeScreen1Btn , #congratsScreenBtn
+{
+    background-image: none; 
+}
+#welcomeScreen2Btn
+{
+    background-image:none; 
+}
+
+ #header.welcome , #header , #header.welcome2 , #header.congrats
+ {
+     background-color: transparent;
+ }
+
+
+ #header.welcome #whiteLogo ,  #header.welcome2 #whiteLogo,  #header.congrats #whiteLogo
+{
+    display: block;
+}
+#header.welcome #blueLogo , #header.welcome2 #blueLogo , #header.congrats #blueLogo
+{
+    display: none;
+}
+ #header.welcome #whiteNav ,  #header #whiteNav,  #header #blueNav , #header.welcome2 #whiteNav, #header.congrats #whiteNav
+{
+    display: none;
+}
+#header.welcome #blueNav , #header.welcome2 #blueNav , #header.congrats #blueNav
+{
+    display: none;
+}
+
+#bulbImg, #lockImg , #trophyImg
+{
+    display: block;
+    position: absolute;
+    top: 15%;
+    width: 30%;
+    left: 5%;
+    max-width: 340px;
+    height: 600px;
+
+}
+#bulbImg img, #lockImg img ,  #trophyImg img
+{
+
+}
+#main.fullHeight
+{
+    height: auto;
+}
+
+#lockImg ,  #trophyImg
+{
+    display: none;
+}
+}
+
+
