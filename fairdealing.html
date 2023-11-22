@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      .levels-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .pull-right {
+        float: right;
+      }
+
+      .question-container,
+      .flow-end-container,
+      .level {
+        margin-bottom: 150px;
+        display: none;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s ease-out;
+      }
+
+      .question-container,
+      .flow-end-container {
+        opacity: 0;
+        margin-top: 0;
+      }
+
+      .question-container {
+        background: #012a5c 0% 0% no-repeat padding-box;
+        box-shadow: 2px 6px 24px #00000029;
+        border-radius: 30px;
+        padding: 30px;
+        color: #fff;
+        max-width: 600px;
+        font: normal normal medium 22px/38px Arial;
+        position: relative;
+      }
+
+      .flow-end-container {
+        background: #009be0 0% 0% no-repeat padding-box;
+        box-shadow: 2px 6px 24px #00000029;
+        border-radius: 30px;
+        padding: 30px;
+        color: #fff;
+        font: normal normal bold 22px/38px Arial;
+      }
+
+      .flow-end-container p {
+        display: inline-block;
+      }
+
+      .level.show {
+        display: block;
+      }
+
+      .question-container.show {
+        display: block;
+      }
+
+      .flow-end-container.show {
+        display: inline-block;
+      }
+
+      .question-container.transition,
+      .flow-end-container.transition {
+        margin-top: -20px;
+        opacity: 1;
+      }
+
+      .yes-btn,
+      .no-btn {
+        padding: 10px;
+        margin-right: 10px;
+        cursor: pointer;
+        outline: none;
+        color: #939393;
+        background: none;
+        border: none;
+        position: absolute;
+        bottom: -55px;
+        overflow: visible;
+      }
+
+      .yes-btn:before,
+      .no-btn:before {
+        content: "x";
+        display: block;
+        background: #fff;
+        border-radius: 50%;
+        border: 5px solid #939393;
+        width: 32px;
+        height: 32px;
+        font-size: 22px;
+      }
+
+      .yes-btn:after,
+      .no-btn:after {
+        content: "";
+        width: 0px;
+        display: block;
+        height: 50px;
+        opacity: 0;
+        border-left: 5px dotted #939393;
+        position: absolute;
+        left: 28px;
+        z-index: 0;
+        transition: all 0.5s ease-out;
+      }
+
+      .yes-btn:before {
+        content: "✓";
+      }
+
+      .yes-btn:focus,
+      .no-btn:focus {
+        outline: 2px solid #939393;
+      }
+
+      .active:focus {
+        outline: 2px solid #009be0;
+      }
+
+      .active {
+        color: #009be0;
+      }
+
+      .active::after {
+        opacity: 1;
+        height: 100px;
+        border-color: #009be0;
+      }
+
+      .active:before {
+        border-color: #009be0;
+      }
+
+      .no-btn {
+        right: 30px;
+      }
+
+      .yes-btn {
+        left: 30px;
+      }
+    </style>
+    <title>Answering Workflow</title>
+  </head>
+  <body>
+    <div class="levels-container">
+      <div id="level-0" class="level show" style="opacity: 1">
+        <div class="question-container show" style="opacity: 1">
+          <p>
+            Are students purchasing all required course materials directly from
+            a bookstore, online service, or other provider?
+          </p>
+          <button
+            class="yes-btn"
+            tabindex="0"
+            onclick="showResponse('1', 'end', this)"
+          >
+            Yes
+          </button>
+          <button
+            class="no-btn"
+            tabindex="0"
+            onclick="showResponse('1', 'ques', this)"
+          >
+            No
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="dynamic-container"
+        aria-live="polite"
+        aria-atomic="true"
+        aria-relevant="additions text"
+        aria-busy="false"
+      >
+        <!-- The content inside this container changes dynamically -->
+        <!-- Place your dynamic content here, e.g., levels 1, 2, 3... -->
+        <div id="level-1" class="level">
+          <div class="question-container">
+            <p>Is the assigned course material protected by copyright?</p>
+            <button
+              class="yes-btn"
+              tabindex="0"
+              onclick="showResponse('2', 'ques', this)"
+            >
+              Yes
+            </button>
+            <button
+              class="no-btn"
+              tabindex="0"
+              onclick="showResponse('2', 'end', this)"
+            >
+              No
+            </button>
+          </div>
+          <div class="flow-end-container">
+            <p>This flowchart is not required.</p>
+          </div>
+        </div>
+
+        <div id="level-2" class="level">
+          <div class="question-container">
+            <p>
+              Does appropriate access and permission already exist in the form
+              of a licence? (i.e.: Library-licenced eResource, open licensing)
+            </p>
+            <button
+              class="yes-btn"
+              tabindex="0"
+              onclick="showResponse('3' , 'end', this)"
+            >
+              Yes
+            </button>
+            <button
+              class="no-btn"
+              tabindex="0"
+              onclick="showResponse('3', 'ques', this)"
+            >
+              No
+            </button>
+          </div>
+
+          <div class="flow-end-container pull-right">
+            <p>Use according to fair dealing principles</p>
+          </div>
+        </div>
+
+        <div id="level-3" class="level">
+          <div class="question-container">
+            <p>
+              Is the proposed use “substantial?” If needed, consult with
+              Copyright Office
+            </p>
+            <button
+              class="yes-btn"
+              tabindex="0"
+              onclick="showResponse('4' , 'ques', this)"
+            >
+              Yes
+            </button>
+            <button
+              class="no-btn"
+              tabindex="0"
+              onclick="showResponse('4', 'end', this)"
+            >
+              No
+            </button>
+          </div>
+
+          <div class="flow-end-container">
+            <p>Use according to terms of licence.</p>
+          </div>
+        </div>
+
+        <div id="level-4" class="level">
+          <div class="question-container">
+            <p>
+              Is an eBook commercially available for acquisition by the library?
+              (Must be available for reasonable terms; e.g., unlimited
+              concurrent users.)
+            </p>
+            <button
+              class="yes-btn"
+              tabindex="0"
+              onclick="showResponse('5' , 'end', this)"
+            >
+              Yes
+            </button>
+            <button
+              class="no-btn"
+              tabindex="0"
+              onclick="showResponse('5', 'ques', this)"
+            >
+              No
+            </button>
+          </div>
+
+          <div class="flow-end-container pull-right">
+            <p>Use according to fair dealing principles</p>
+          </div>
+        </div>
+
+        <div id="level-5" class="level">
+          <div class="question-container">
+            <p>
+              Does the amount of the course material being considered exceed a
+              “small excerpt” as defined in institutional guidelines? A small
+              excerpt may include the following: • One chapter of a book • An
+              entire musical score, short story, or play, etc. that is part of a
+              collection of similar works.
+            </p>
+            <button
+              class="yes-btn"
+              tabindex="0"
+              onclick="showResponse('6' , 'ques-a', this)"
+            >
+              Yes
+            </button>
+            <button
+              class="no-btn"
+              tabindex="0"
+              onclick="showResponse('6', 'ques-b', this)"
+            >
+              No
+            </button>
+          </div>
+
+          <div class="flow-end-container">
+            <p>Library will acquire eBook licence</p>
+          </div>
+        </div>
+
+        <div id="level-6" class="level">
+          <div class="question-container ques-a">
+            <p>
+              Attempt to seek permission via a transactional licence. Is this
+              possible?
+            </p>
+            <button
+              class="yes-btn"
+              tabindex="0"
+              onclick="showResponse('7' , 'end-a-a', this)"
+            >
+              Yes
+            </button>
+            <button
+              class="no-btn"
+              tabindex="0"
+              onclick="showResponse('7', 'end-a-b', this)"
+            >
+              No
+            </button>
+          </div>
+          <div class="question-container ques-b">
+            <p>
+              Is the copying permitted using an exception to copyright
+              infringement? If needed, consult with Copyright Office.
+            </p>
+            <button
+              class="yes-btn"
+              tabindex="0"
+              onclick="showResponse('7' , 'end-b-a', this)"
+            >
+              Yes
+            </button>
+            <button
+              class="no-btn"
+              tabindex="0"
+              onclick="showResponse('7', 'end-b-b', this)"
+            >
+              No
+            </button>
+          </div>
+        </div>
+
+        <div id="level-7" class="level">
+          <div class="flow-end-container end-a-a">
+            <p>Use according to terms of licence.</p>
+          </div>
+          <div class="flow-end-container end-a-b">
+            <p>
+              Permission unavailable? Select another work or place physical item
+              on short-term loan in the library
+            </p>
+          </div>
+          <div class="flow-end-container end-b-a">
+            <p>Use according to fair dealing principles</p>
+          </div>
+          <div class="flow-end-container end-b-b">
+            <p>
+              Select another work or place physical item on short-term loan in
+              the library
+            </p>
+          </div>
+        </div>
+
+        <!-- Add more levels as needed -->
+      </div>
+    </div>
+    <script>
+      function showResponse(level, boxRef, button) {
+        if (button.classList.contains("active")) {
+          // If it has the "active" class, do nothing
+          return;
+        }
+        button
+          .closest("div")
+          .querySelectorAll("button")
+          .forEach((btn) => {
+            btn.classList.remove("active");
+          });
+
+        button.classList.add("active");
+
+        const levelDivsCount = document.querySelectorAll(".level").length;
+        let boxClass = "";
+        boxClass = boxRef;
+        console.log(boxRef);
+        if (boxRef === "ques") {
+          boxClass = "question-container";
+        } else if (boxRef === "end") {
+          boxClass = "flow-end-container";
+        }
+
+        for (let i = level; i < levelDivsCount; i++) {
+          document.getElementById(`level-${i}`).classList.remove("show");
+          document
+            .getElementById(`level-${i}`)
+            .querySelectorAll("button")
+            .forEach((btn) => {
+              btn.classList.remove("active");
+            });
+        }
+        document
+          .querySelectorAll(
+            `#level-${level} .question-container, #level-${level} .flow-end-container`
+          )
+          .forEach((container) => {
+            container.classList.remove("show");
+            container.classList.remove("transition");
+          });
+        console.log(`#level-${level} .${boxClass}`);
+        // Show the relevant question container based on the level
+        document.getElementById(`level-${level}`).classList.add("show");
+
+        // Show the relevant flow-end container based on the boxId
+        document
+          .querySelector(`#level-${level} .${boxClass}`)
+          .classList.add("show");
+        setTimeout(function () {
+          document
+            .querySelector(`#level-${level} .${boxClass}`)
+            .classList.add("transition");
+          document
+            .getElementById(`level-${level}`)
+            .scrollIntoView({ behavior: "smooth" });
+        }, 10);
+
+        updateDynamicContent();
+      }
+
+      function updateDynamicContent() {
+        // Indicate to assistive technologies that an update is in progress
+        document
+          .getElementById("dynamic-container")
+          .setAttribute("aria-busy", "true");
+
+        // Simulate completion of the update after a delay
+        setTimeout(() => {
+          // Indicate the dynamic content change to assistive technologies
+          document
+            .getElementById("dynamic-container")
+            .setAttribute("aria-busy", "false");
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
